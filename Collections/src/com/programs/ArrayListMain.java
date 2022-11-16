@@ -1,45 +1,41 @@
 package com.programs;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class ArrayListMain {
 
 	public static void main(String[] args) {
+		ArrayList<String> lst=new ArrayList<String>();
+		lst.add("Kiran");
+		lst.add("Ravi");
+		lst.add("Manoj");
+		lst.add("Swetha");
 		
-		ArrayList <Integer> lst=new ArrayList <Integer>();
-		lst.add(50);
-		lst.add(60);
-		lst.add(70);
-		
-		//lst.clear();
 		System.out.println(lst);
-		System.out.println(lst.contains(90));
+		//using for loop
+		for(String n:lst) {
+			System.out.println(n);
+		}
 		
-		ArrayList <Integer> lst1=new ArrayList <Integer>();
-		lst1.add(10);
-		lst1.add(20);
-		lst1.add(30);
-		
-		System.out.println(lst1);
-		
-		lst.addAll(lst1);
-		
-		Iterator<Integer> it=lst.iterator();
-		
+		Collections.sort(lst);
+		//try with iterator
+		Iterator<String>it=lst.iterator();
 		while(it.hasNext()) {
-			System.out.print(it.next()+" ");
-		}
-		System.out.println();
-		for(int a:lst) {
-			System.out.print(a+" ");
+			System.out.println(it.next());
 		}
 		
-		lst.clear();
+		Collections.swap(lst, 1, 3);
 		System.out.println(lst);
-		}
-	
-	
-	  
+		
+		Collections.shuffle(lst);
+		System.out.println("First shuffle");
+		System.out.println(lst);
+		
+		Collections.shuffle(lst);
+		System.out.println("second shuffle");
+		System.out.println(lst);
+	}
 
 }
