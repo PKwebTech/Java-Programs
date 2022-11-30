@@ -1,4 +1,4 @@
-// Diffrent Blocks in Java.
+// Different Blocks in Java.
 package com.programs;
 
 public class BlocksMain {
